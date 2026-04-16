@@ -82,11 +82,3 @@ The Logistic Regression model demonstrated excellent performance in predicting a
 
 ---
 
-## 🚀 How to Run  
-
-```bash
-# Install required libraries
-pip install pandas numpy matplotlib seaborn scikit-learn
-
-# Run the notebook or script
-```
