@@ -1,53 +1,92 @@
-Ad Click Prediction Using Logistic Regression
-Overview
+# 📊 Advertising Click-Through Rate Prediction  
 
-This lab focuses on building a model to determine whether a user is likely to click on an advertisement. By using a set of user-related features, a Logistic Regression algorithm was trained on a synthetic dataset to classify user responses with high reliability.
+## 📌 Overview  
+This project aims to predict whether a user will click on an advertisement based on various behavioral and demographic features. A Logistic Regression model was trained on a synthetic advertising dataset to classify user interactions with high accuracy.
 
-Data Description
+---
 
-The dataset contains multiple features that describe user behavior and demographics:
+## 📂 Dataset  
+The dataset includes the following features:
 
-Daily Time Spent on Site: Number of minutes a user spends browsing the website
-Age: Age of the user
-Area Income: Average income in the user’s region
-Daily Internet Usage: Time spent online per day (in minutes)
-Ad Topic Line: Title or headline of the advertisement
-City: User’s city
-Male: Gender indicator (1 = Male, 0 = Female)
-Country: User’s country
-Timestamp: Time at which the user interacted with the ad
-Clicked on Ad: Target variable indicating whether the ad was clicked
-Process
-Data Exploration
+- **Daily Time Spent on Site** – Time spent on the website (minutes)  
+- **Age** – User age (years)  
+- **Area Income** – Average income of the user's region  
+- **Daily Internet Usage** – Daily internet usage (minutes)  
+- **Ad Topic Line** – Advertisement headline  
+- **City** – User’s city  
+- **Male** – Gender indicator (1 = Male, 0 = Female)  
+- **Country** – User’s country  
+- **Timestamp** – Interaction time  
+- **Clicked on Ad** – Target variable (1 = Clicked, 0 = Not Clicked)  
 
-Initial analysis was performed to better understand the dataset:
+---
 
-Used histograms to observe how age values are distributed
-Applied joint plots to examine the relationship between age and income
-Investigated how time spent on the site relates to internet usage
-Created pair plots categorized by ad-click behavior to highlight patterns
-Data Preparation
-Selected only numerical features for model training
-Divided the dataset into training (67%) and testing (33%) sets
-Model Development
-Applied Logistic Regression using the Scikit-Learn library
-Increased iteration limit to ensure the model converges properly
-Results
+## 🔍 Exploratory Data Analysis (EDA)  
 
-The model performed very well, achieving an accuracy of 97%.
+Data visualization was performed to understand patterns and relationships:
 
-Additional evaluation metrics:
+- Distribution of age using histograms  
+- Relationship between Age and Area Income using joint plots  
+- Correlation between Daily Time Spent on Site and Daily Internet Usage  
+- Pair plots based on "Clicked on Ad" to analyze behavior differences  
 
-Precision: 0.98 → very few false positives
-Recall: 0.96 → most actual clicks are correctly identified
-F1-Score: 0.97 → balanced and reliable performance
-Tools Used
-Python
-Pandas
-NumPy
-Matplotlib
-Seaborn
-Scikit-Learn
-Summary
+---
 
-The results show that Logistic Regression is highly effective for predicting whether users will click on ads. The selected features capture user behavior efficiently, leading to strong overall performance.
+## ⚙️ Data Preparation  
+
+- Selected numerical features:  
+  - Age  
+  - Area Income  
+  - Daily Time Spent on Site  
+  - Daily Internet Usage  
+- Split dataset into:
+  - **Training set (67%)**
+  - **Testing set (33%)**
+
+---
+
+## 🤖 Model  
+
+- Algorithm: **Logistic Regression**  
+- Library: **Scikit-Learn**  
+- Adjusted parameter:
+  - Increased `max_iter` to ensure convergence  
+
+---
+
+## 📈 Performance  
+
+The model achieved strong results:
+
+- **Accuracy**: 97%  
+- **Precision**: 0.98  
+- **Recall**: 0.96  
+- **F1-Score**: 0.97  
+
+---
+
+## 🛠️ Technologies Used  
+
+- Python  
+- Pandas  
+- NumPy  
+- Matplotlib  
+- Seaborn  
+- Scikit-Learn  
+
+---
+
+## ✅ Conclusion  
+
+The Logistic Regression model demonstrated excellent performance in predicting ad click behavior. The selected features effectively represent user activity, resulting in high accuracy and balanced evaluation metrics.
+
+---
+
+## 🚀 How to Run  
+
+```bash
+# Install required libraries
+pip install pandas numpy matplotlib seaborn scikit-learn
+
+# Run the notebook or script
+```
